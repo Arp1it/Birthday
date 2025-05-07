@@ -1,170 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy New Year, Friends!</title>
-    <link rel="icon" href="celebration.png" />
-    <style>
-        /* General reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            min-height: 100vh;
-            background: linear-gradient(120deg, #1e3c72, #2a5298, #76b852, #8dc26f);
-            background-size: 400% 400%;
-            animation: gradient 10s ease infinite;
-            color: #fff;
-            overflow-y: auto; /* Enable vertical scrolling */
-        }
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .container {
-            text-align: center;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-            width: 90%;
-            max-width: 600px;
-            margin: 50px auto; /* Center the content with scrolling */
-            animation: fadeIn 1.5s ease;
-            position: relative;
-            z-index: 10;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        h1 {
-            font-size: 2.8em;
-            color: #ffd700;
-            margin-bottom: 10px;
-            text-transform: capitalize;
-        }
-        p {
-            font-size: 1.2em;
-            margin: 15px 0;
-            line-height: 1.6;
-            color: #eee;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
-            margin: 20px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        button {
-            padding: 12px 25px;
-            font-size: 1em;
-            color: #fff;
-            background: #ff6f61;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
-        button:hover {
-            background: #e5574f;
-            transform: scale(1.05);
-        }
-        .footer {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #ddd;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday, Batgirl!</title>
+  <link rel="icon" href="🎂" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* Rain Effect */
-        .rain-container {
-            position: fixed; /* Fixed to viewport, not scrolling with the content */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-            z-index: 5;
-        }
-        .rain {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            animation: fall 5s linear infinite;
-        }
-        @keyframes fall {
-            0% {
-                transform: translateY(-100vh) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-    </style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #f093fb, #f5576c, #ff9966, #ffc371);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: #fff;
+      min-height: 100vh;
+      overflow-y: auto;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ffe066;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: #fceabb;
+      margin: 10px 0;
+    }
+
+    img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 15px;
+      margin: 20px 0;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    }
+
+    button {
+      background: #ff4081;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #f53668;
+      transform: scale(1.05);
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #eee;
+    }
+
+    .confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 5;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      font-size: 1.5em;
+      animation: fall 5s linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    /* Popup Card Styles */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .popup-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .birthday-card {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      width: 90%;
+      max-width: 400px;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      position: relative;
+      transform: scale(0.8);
+      transition: transform 0.4s ease;
+    }
+
+    .popup-overlay.active .birthday-card {
+      transform: scale(1);
+    }
+
+    .birthday-card h2 {
+      font-size: 2em;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .birthday-card p {
+      color: #555;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+    .birthday-card img {
+      width: 80%;
+      max-width: 300px;
+      border-radius: 10px;
+      margin: 15px auto;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5em;
+      cursor: pointer;
+      color: #333;
+      background: none;
+      border: none;
+      transition: transform 0.3s ease;
+    }
+
+    .close-btn:hover {
+      transform: scale(1.2);
+      background: none;
+    }
+
+    .birthday-wishes {
+      margin-top: 20px;
+    }
+
+    .wish-btn {
+      background: #ff6b6b;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      margin: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .wish-btn:hover {
+      background: #ff5252;
+      transform: scale(1.05);
+    }
+
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .heart {
+      color: #ff4081;
+      display: inline-block;
+      animation: heartbeat 1s infinite;
+    }
+  </style>
 </head>
 <body>
-    <div class="rain-container" id="rain-container"></div>
-    <div class="container">
-        <h1>Happy New Year 2025! 🎉</h1>
-        <p>
-            Dear friends, as we welcome this new year, let’s celebrate the memories we’ve made and the adventures that lie ahead! 🌟
-        </p>
-        <p>
-            2025 is a new chapter, full of opportunities, laughter, and moments to cherish together. 💖
-        </p>
-        <p>
-            Thank you for being amazing and always spreading positivity. 
-            Let’s make this year unforgettable with great experiences and shared happiness! 💕
-        </p>
-        <p>
-            Wishing you all success, health, and joy in the year ahead. Cheers to friendship and endless possibilities! 🥂
-        </p>
-        <img src="happynewyear2025.jpg" height="300" width="400" alt="New Year Celebration">
-        <button onclick="alert('Let’s make 2025 awesome together! 🎉')">
-            Celebrate 🎆
-        </button>
-        <div class="footer">
-            <p>Made with gratitude and care for all my friends.</p>
-        </div>
+  <div class="confetti" id="confetti-container"></div>
+
+  <div class="container">
+    <h1>🎉 Happy Birthday, Batgirl! 🎂</h1>
+    <p>
+      Wishing you a day filled with love, laughter, cake, and magical memories! 💖
+    </p>
+    <p>
+      You're not just another year older — you're another year more wonderful, strong, and inspiring. 🌸
+    </p>
+    <p>
+      Thank you for being such an incredible person and friend. I hope this year brings you everything your heart desires! ✨
+    </p>
+    <p>
+      Keep shining, keep dreaming, and keep being amazing — because the world is so much brighter with you in it. 💫
+    </p>
+
+    <button id="wish-button">
+      Make a wish 🎈
+    </button>
+
+    <div class="footer">
+      <p>Made with love for Batgirl 💝</p>
     </div>
+  </div>
 
-    <script>
-        const rainContainer = document.getElementById('rain-container');
+  <!-- Popup Card -->
+  <div class="popup-overlay" id="popup-overlay">
+    <div class="birthday-card">
+      <button class="close-btn" id="close-popup">✖</button>
+      <h2>Happy Birthday! <span class="heart">❤️</span></h2>
+      <img src="1.jpeg" alt="Birthday gift" />
+      <p>Sending you the brightest wishes on your special day!</p>
+      <p>May all your dreams come true!</p>
+      
+      <div class="birthday-wishes">
+        <button class="wish-btn" onclick="makeWish('health')">Wish for Health</button>
+        <button class="wish-btn" onclick="makeWish('wealth')">Wish for Wealth</button>
+        <button class="wish-btn" onclick="makeWish('happiness')">Wish for Happiness</button>
+      </div>
+    </div>
+  </div>
 
-        function createRainElement() {
-            const rain = document.createElement('div');
-            rain.classList.add('rain');
+  <script>
+    const confettiContainer = document.getElementById("confetti-container");
+    const popupOverlay = document.getElementById("popup-overlay");
+    const wishButton = document.getElementById("wish-button");
+    const closePopupButton = document.getElementById("close-popup");
 
-            // Randomize position, size, and appearance
-            const left = Math.random() * window.innerWidth;
-            const size = Math.random() * 30 + 10;
-            const emojis = ['✨', '🎆', '🎉', '🎊', '🌟', '🍾', '💝', '💞'];
-            const type = emojis[Math.floor(Math.random() * emojis.length)];
+    function createConfetti() {
+      const piece = document.createElement("div");
+      piece.classList.add("confetti-piece");
 
-            rain.style.left = `${left}px`;
-            rain.style.width = `${size}px`;
-            rain.style.height = `${size}px`;
-            rain.style.backgroundImage = `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50%" x="50%" text-anchor="middle" dominant-baseline="middle" font-size="90" fill="gold">${type}</text></svg>')`;
+      const left = Math.random() * window.innerWidth;
+      const emojiList = ["🎂", "🎉", "🎈", "🥳", "💖", "🌟", "🎁", "🍰"];
+      const emoji = emojiList[Math.floor(Math.random() * emojiList.length)];
+      piece.style.left = `${left}px`;
+      piece.style.fontSize = `${Math.random() * 10 + 20}px`;
+      piece.innerText = emoji;
 
-            rainContainer.appendChild(rain);
+      confettiContainer.appendChild(piece);
+      setTimeout(() => piece.remove(), 5000);
+    }
 
-            setTimeout(() => rain.remove(), 5000);
-        }
+    function openPopup() {
+      popupOverlay.classList.add("active");
+      // Create extra confetti when popup opens
+      for (let i = 0; i < 20; i++) {
+        setTimeout(createConfetti, i * 50);
+      }
+    }
 
-        setInterval(createRainElement, 100);
-    </script>
+    function closePopup() {
+      popupOverlay.classList.remove("active");
+    }
+
+    function makeWish(wishType) {
+      let wishMessage = "";
+      switch(wishType) {
+        case "health":
+          wishMessage = "May you enjoy perfect health and vitality all year long! 🌱";
+          break;
+        case "wealth":
+          wishMessage = "May prosperity and abundance flow into your life! 💰";
+          break;
+        case "happiness":
+          wishMessage = "May joy and laughter fill every moment of your year! 😊";
+          break;
+      }
+      alert(wishMessage);
+      // More confetti for wishes
+      for (let i = 0; i < 10; i++) {
+        setTimeout(createConfetti, i * 100);
+      }
+    }
+
+    // Event listeners
+    wishButton.addEventListener("click", openPopup);
+    closePopupButton.addEventListener("click", closePopup);
+
+    // Close popup if clicking outside the card
+    popupOverlay.addEventListener("click", function(e) {
+      if (e.target === popupOverlay) {
+        closePopup();
+      }
+    });
+
+    // Start confetti
+    setInterval(createConfetti, 150);
+  </script>
 </body>
 </html>
